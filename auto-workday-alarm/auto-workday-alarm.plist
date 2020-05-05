@@ -153,6 +153,16 @@
 				<true/>
 				<key>UUID</key>
 				<string>1C5D1D05-EF22-4624-8535-5644805EF77A</string>
+				<key>WFHTTPHeaders</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFDictionaryFieldValueItems</key>
+						<array/>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFDictionaryFieldValue</string>
+				</dict>
 				<key>WFURL</key>
 				<string>https://holidays.leanapp.cn</string>
 			</dict>
@@ -223,6 +233,67 @@
 					<key>WFSerializationType</key>
 					<string>WFTextTokenAttachment</string>
 				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>com.apple.mobiletimer-framework.MobileTimerIntents.MTToggleAlarmIntent</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>AA26C5CD-3130-48ED-8828-32CFE320B5BA</string>
+				<key>alarm</key>
+				<dict>
+					<key>dateComponents</key>
+					<dict>
+						<key>hour</key>
+						<integer>0</integer>
+						<key>minute</key>
+						<integer>50</integer>
+						<key>second</key>
+						<integer>0</integer>
+					</dict>
+					<key>displayString</key>
+					<string>00:50</string>
+					<key>identifier</key>
+					<string>6AF1FF32-6A33-4C89-8BAA-42D0CD3E4D6F</string>
+					<key>repeatSchedule</key>
+					<array>
+						<dict>
+							<key>displayString</key>
+							<string>Never</string>
+							<key>value</key>
+							<integer>0</integer>
+						</dict>
+					</array>
+				</dict>
+				<key>operation</key>
+				<string>unknown</string>
+				<key>state</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>闹钟</string>
+						<key>OutputUUID</key>
+						<string>AA26C5CD-3130-48ED-8828-32CFE320B5BA</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>Alarm</string>
 			</dict>
 		</dict>
 		<dict>
@@ -306,164 +377,16 @@
 				<string>5529322B-855F-4BED-96B8-E78D23F77858</string>
 				<key>alarm</key>
 				<dict>
-					<key>dateComponents</key>
+					<key>Value</key>
 					<dict>
-						<key>hour</key>
-						<integer>10</integer>
-						<key>minute</key>
-						<integer>0</integer>
-						<key>second</key>
-						<integer>0</integer>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>Alarm</string>
 					</dict>
-					<key>displayString</key>
-					<dict>
-						<key>bundleIdentifier</key>
-						<string>com.apple.mobiletimer-framework</string>
-						<key>bundleURL</key>
-						<string>file:///System/Library/PrivateFrameworks/MobileTimer.framework/</string>
-						<key>formatKey</key>
-						<string>BED_TIME</string>
-					</dict>
-					<key>identifier</key>
-					<string>0334D45D-0A3F-4F1B-9406-8631352F8F7A</string>
-					<key>repeatSchedule</key>
-					<array>
-						<dict>
-							<key>displayString</key>
-							<string>Sunday</string>
-							<key>value</key>
-							<integer>64</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Monday</string>
-							<key>value</key>
-							<integer>1</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Tuesday</string>
-							<key>value</key>
-							<integer>2</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Wednesday</string>
-							<key>value</key>
-							<integer>4</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Thursday</string>
-							<key>value</key>
-							<integer>8</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Friday</string>
-							<key>value</key>
-							<integer>16</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Saturday</string>
-							<key>value</key>
-							<integer>32</integer>
-						</dict>
-					</array>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
 				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.conditional</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>GroupingIdentifier</key>
-				<string>88B89EE3-07F1-4381-90F9-B3C4DE6E7DA5</string>
-				<key>WFControlFlowMode</key>
-				<integer>1</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>com.apple.mobiletimer-framework.MobileTimerIntents.MTToggleAlarmIntent</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>AA26C5CD-3130-48ED-8828-32CFE320B5BA</string>
-				<key>alarm</key>
-				<dict>
-					<key>dateComponents</key>
-					<dict>
-						<key>hour</key>
-						<integer>10</integer>
-						<key>minute</key>
-						<integer>0</integer>
-						<key>second</key>
-						<integer>0</integer>
-					</dict>
-					<key>displayString</key>
-					<dict>
-						<key>bundleIdentifier</key>
-						<string>com.apple.mobiletimer-framework</string>
-						<key>bundleURL</key>
-						<string>file:///System/Library/PrivateFrameworks/MobileTimer.framework/</string>
-						<key>formatKey</key>
-						<string>BED_TIME</string>
-					</dict>
-					<key>identifier</key>
-					<string>0334D45D-0A3F-4F1B-9406-8631352F8F7A</string>
-					<key>repeatSchedule</key>
-					<array>
-						<dict>
-							<key>displayString</key>
-							<string>Sunday</string>
-							<key>value</key>
-							<integer>64</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Monday</string>
-							<key>value</key>
-							<integer>1</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Tuesday</string>
-							<key>value</key>
-							<integer>2</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Wednesday</string>
-							<key>value</key>
-							<integer>4</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Thursday</string>
-							<key>value</key>
-							<integer>8</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Friday</string>
-							<key>value</key>
-							<integer>16</integer>
-						</dict>
-						<dict>
-							<key>displayString</key>
-							<string>Saturday</string>
-							<key>value</key>
-							<integer>32</integer>
-						</dict>
-					</array>
-				</dict>
-				<key>operation</key>
-				<string>unknown</string>
-				<key>state</key>
-				<integer>0</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -492,7 +415,16 @@
 		<integer>2071128575</integer>
 	</dict>
 	<key>WFWorkflowImportQuestions</key>
-	<array/>
+	<array>
+		<dict>
+			<key>ActionIndex</key>
+			<integer>6</integer>
+			<key>Category</key>
+			<string>Parameter</string>
+			<key>ParameterKey</key>
+			<string>alarm</string>
+		</dict>
+	</array>
 	<key>WFWorkflowInputContentItemClasses</key>
 	<array>
 		<string>WFAppStoreAppContentItem</string>
